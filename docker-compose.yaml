@@ -1,0 +1,26 @@
+version: '3'
+services:
+  web1: &web
+    image: nginx:latest  # imagen nginx
+    volumes:
+      - ./src:/usr/share/nginx/html  # volúmen compartido
+    restart: always
+    ports:
+      - 80:80  # puerto ext:puerto int para enrutamiento del conenedor
+    networks:
+      - web_net
+  web2:
+    <<: *web
+    ports:
+      - 81:80   # puerto ext:puerto int para enrutamiento del conenedor
+      networks:
+      - web_net
+  web3:
+    <<: *web
+    ports:
+      - 82:80   # puerto ext:puerto int para enrutamiento del conenedor
+    networks:
+      - web_net
+networks:
+  web_net:
+    driver: bridge
