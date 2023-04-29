@@ -1,31 +1,31 @@
 ---
 usuario:
-  nombre: dayron
-  apellido1: remigio
-  apellido2: hernandez
-  herramienta1: docker
-  herramienta2: k8s
-  herramienta3: terraform
-  herramienta4: ansible
+    nombre: dayron
+    apellido1: remigio
+    apellido2: hernandez
+    herramienta1: docker
+    herramienta2: k8s
+    herramienta3: terraform
+    herramienta4: ansible
 usuario2:
-  nombre: dayron2
-  apellido1: remigio
-  apellido2: hernandez
-  herramienta1: docker
-  herramienta2: k8s
-  herramienta3: terraform
-  herramienta4: ansible
+    nombre: dayron2
+    apellido1: remigio
+    apellido2: hernandez
+    herramienta1: docker
+    herramienta2: k8s
+    herramienta3: terraform
+    herramienta4: ansible
 ---
 usuarios:
-  - nombre: dayron
-    apellidos: [remigio, hernandez]
-    herramientas:
-      - docker
-      - k8s
-      - terraform
-  - nombre: dayron2
-    apellidos: [remigio1, hernandez2]
-    herramientas:
-      - k8s
-      - ansible
-      - docker
+    - nombre: dayron
+      apellidos: [remigio, hernandez]
+      herramientas:
+          - docker
+          - k8s
+          - terraform
+    - nombre: dayron2
+      apellidos: [remigio1, hernandez2]
+      herramientas:
+          - k8s
+          - ansible
+          - docker
