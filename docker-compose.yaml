@@ -1,3 +1,4 @@
+---
 version: '3'
 services:
   web1: &web
@@ -13,7 +14,7 @@ services:
     <<: *web
     ports:
       - 81:80   # puerto ext:puerto int para enrutamiento del conenedor
-      networks:
+    networks:
       - web_net
   web3:
     <<: *web

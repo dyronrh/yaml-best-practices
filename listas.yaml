@@ -1,3 +1,4 @@
+---
 usuario:
   nombre: dayron
   apellido1: remigio
@@ -17,18 +18,14 @@ usuario2:
 ---
 usuarios:
   - nombre: dayron
-    apellidos: [remigio,hernandez]
+    apellidos: [remigio, hernandez]
     herramientas:
       - docker
       - k8s
       - terraform
   - nombre: dayron2
-    apellidos: [remigio1,hernandez2]
+    apellidos: [remigio1, hernandez2]
     herramientas:
       - k8s
       - ansible
       - docker
-  
-
-
-
