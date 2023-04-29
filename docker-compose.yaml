@@ -7,7 +7,7 @@ services:
       - ./src:/usr/share/nginx/html  # volúmen compartido
     restart: always
     ports:
-      - 80:80  # puerto ext:puerto int para enrutamiento del conenedor
+     - 80:80  # puerto ext:puerto int para enrutamiento del conenedor
     networks:
       - web_net
   web2:
