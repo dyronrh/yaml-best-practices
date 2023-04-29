@@ -11,14 +11,14 @@ usuario2:
     nombre: dayron2
     apellido1: remigio
     apellido2: hernandez
-    herramienta1:   docker
-    herramienta2:  k8s
-    herramienta3:   terraform
+    herramienta1: docker
+    herramienta2: k8s
+    herramienta3: terraform
     herramienta4: ansible
 ---
 usuarios:
     - nombre: dayron
-      apellidos: [remigio,hernandez]
+      apellidos: [remigio, hernandez]
       herramientas:
           - docker
           - k8s
