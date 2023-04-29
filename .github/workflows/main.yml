@@ -16,11 +16,14 @@ jobs:
               uses: actions/setup-python@v1
               with:
                   python-version: 3.8
+
+            # formatear los yaml del repositorio
+            - name: yaml-lint
+              uses: ibiqlik/action-yamllint@v3
+
             # valida errores yaml del repositorio
             - name: Linting
               run: |
                   pip install pre-commit
                     pre-commit run --all-files
-            # formatear los yaml del repositorio
-            - name: yaml-lint
-              uses: ibiqlik/action-yamllint@v3
+
