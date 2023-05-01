@@ -88,6 +88,7 @@ Valida tus archivos YAML para asegurarte de que se adhieren a la sintaxis correc
 
 ### 6 Usa constantes en lugar de valores literales: 
   Al definir constantes, podemos asignar un valor a una variable y luego usar esa variable en todo el archivo YAML. Esto hace que sea más fácil actualizar el valor en una sola ubicación y actualizar automáticamente todas las instancias de ese valor en todo el archivo YAML.
+  
 ```yaml
 # Ejemplo 1: Definición de constante
 constants:
@@ -124,7 +125,7 @@ No incluyas información confidencial, como contraseñas o claves de API, en tus
 ### 10 Pruebas: 
 Realiza pruebas exhaustivas en tus archivos YAML para asegurarte de que funcionan correctamente antes de utilizarlos en producción.
 
-  
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
