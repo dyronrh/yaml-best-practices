@@ -1,0 +1,26 @@
+---
+# Ejemplo 1: Definición de constante
+constants:
+    MAX_USERS: 100
+
+# Ejemplo 2: Uso de constante
+database:
+    name: my_database
+    max_users: ${constants.MAX_USERS}
+    username: ${USER_NAME}
+
+    password: ${PASSWORD}
+
+# Ejemplo 3: Uso de constante en una lista
+servers:
+    - name: server1
+      max_users: ${constants.MAX_USERS}
+    - name: server2
+      max_users: ${constants.MAX_USERS}
+
+# Ejemplo 4: Uso de constante en un objeto anidado
+service:
+    name: my_service
+    settings:
+        max_users: ${constants.MAX_USERS}
+        timeout: 60

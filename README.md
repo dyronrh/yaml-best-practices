@@ -86,9 +86,32 @@ Utiliza anclas y referencias para evitar duplicar definiciones. Esto reduce el t
 ### 5 Validación: 
 Valida tus archivos YAML para asegurarte de que se adhieren a la sintaxis correcta y que son válidos.
 
-### 6 Modularidad: 
-Divide tu archivo YAML en módulos lógicos para una mayor claridad y facilidad de mantenimiento.
+### 6 Usa constantes en lugar de valores literales: 
+  Al definir constantes, podemos asignar un valor a una variable y luego usar esa variable en todo el archivo YAML. Esto hace que sea más fácil actualizar el valor en una sola ubicación y actualizar automáticamente todas las instancias de ese valor en todo el archivo YAML.
+```yaml
+# Ejemplo 1: Definición de constante
+constants:
+  MAX_USERS: 100
 
+# Ejemplo 2: Uso de constante
+database:
+  name: my_database
+  max_users: ${constants.MAX_USERS}
+
+# Ejemplo 3: Uso de constante en una lista
+servers:
+  - name: server1
+    max_users: ${constants.MAX_USERS}
+  - name: server2
+    max_users: ${constants.MAX_USERS}
+  
+# Ejemplo 4: Uso de constante en un objeto anidado
+service:
+  name: my_service
+  settings:
+    max_users: ${constants.MAX_USERS}
+    timeout: 60
+```
 ### 7 Documentación: 
 Documenta tus archivos YAML para que los demás puedan entenderlos fácilmente y utilizarlos correctamente.
 
@@ -98,50 +121,10 @@ Utiliza un sistema de control de versiones para tus archivos YAML, lo que te per
 ### 9 Seguridad: 
 No incluyas información confidencial, como contraseñas o claves de API, en tus archivos YAML. En su lugar, utiliza variables de entorno o archivos de configuración separados.
 
-### 1o Pruebas: 
+### 10 Pruebas: 
 Realiza pruebas exhaustivas en tus archivos YAML para asegurarte de que funcionan correctamente antes de utilizarlos en producción.
 
-```yaml
-version: '3'
-services:
-  web1: 
-    image: nginx:latest
-    volumes:
-      - ./src:/usr/share/nginx/html
-    restart: always
-    ports:
-      - 80:80
-  web2:
-    image: nginx:latest
-    volumes:
-      - ./src:/usr/share/nginx/html
-    restart: always
-    ports:
-      - 81:80
-  web3:
-    image: nginx:latest
-    volumes:
-      - ./src:/usr/share/nginx/html
-    restart: always
-    ports:
-      - 82:80
-```
-
-## Usage
-
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
-
+  
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
